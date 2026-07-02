@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="東洋医学の五行論にもとづく体質診断。自然を見つめるように、自分の体を知る。" />
+  <title>五行体質診断 | 1分でわかる東洋医学タイプ診断</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- トップ画面 -->
+  <div id="screen-top" class="screen active">
+    <div class="top-inner">
+      <div class="hero-image-wrap">
+        <img src="assets/top.jpg" alt="五行が調和する世界" class="hero-image" />
+      </div>
+      <h1 class="top-title">五行体質診断</h1>
+      <p class="top-sub">1分でわかる東洋医学タイプ診断</p>
+      <div class="top-divider"></div>
+      <p class="top-desc">自然を見つめるように、自分の体を知る。<br>10の質問に答えると、あなたの五行タイプと体質傾向がわかります。</p>
+      <button class="btn-primary" id="btn-start">診断をはじめる</button>
+      <p class="top-note">所要時間：約1分 ／ 全10問</p>
+    </div>
+  </div>
+
+  <!-- 診断画面 -->
+  <div id="screen-quiz" class="screen">
+    <div class="quiz-inner">
+      <div class="quiz-header">
+        <div class="progress-wrap">
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <span class="progress-label" id="progress-label">1 / 10</span>
+        </div>
+      </div>
+      <div class="question-card" id="question-area">
+        <p class="question-num" id="question-num">Q1</p>
+        <h2 class="question-text" id="question-text"></h2>
+      </div>
+      <div class="options-list" id="options-list"></div>
+      <button class="btn-back" id="btn-back">← 前の質問に戻る</button>
+    </div>
+  </div>
+
+  <!-- 結果画面 -->
+  <div id="screen-result" class="screen">
+    <div class="result-inner">
+      <p class="result-eyebrow">診断結果</p>
+
+      <div class="result-hero" id="result-hero">
+        <img src="" alt="" class="result-hero-image" id="result-hero-image" />
+        <div class="result-hero-text">
+          <div class="main-name" id="result-main-name"></div>
+          <div class="main-theme" id="result-main-theme"></div>
+        </div>
+      </div>
+
+      <p class="main-desc" id="result-desc"></p>
+
+      <div class="result-sub-row">
+        <div class="result-sub-block">
+          <span class="result-sub-label">副タイプ</span>
+          <span class="result-sub-value" id="result-sub-type"></span>
+        </div>
+        <div class="result-sub-block">
+          <span class="result-sub-label">隠れ体質</span>
+          <span class="result-sub-value" id="result-constitution"></span>
+        </div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-heading">長所</h3>
+        <div class="tag-list" id="result-strengths"></div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-heading">注意点</h3>
+        <div class="tag-list tag-list-caution" id="result-cautions"></div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-heading">おすすめ食材</h3>
+        <div class="food-list" id="result-foods"></div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-heading">意識したいツボ</h3>
+        <div class="tsubo-card" id="result-tsubo"></div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-heading">隠れ体質の詳細</h3>
+        <div id="result-constitution-detail"></div>
+      </div>
+
+      <div class="result-section">
+        <h3 class="section-heading">五行バランス</h3>
+        <div class="bar-chart" id="bar-chart"></div>
+      </div>
+
+      <p class="result-disclaimer">※この診断は東洋医学への興味を深めるための参考情報です。医療診断ではありません。体の不調は専門家にご相談ください。</p>
+
+      <div class="result-actions">
+        <button class="btn-share" id="btn-share">結果をシェアする</button>
+        <button class="btn-retry" id="btn-retry">もう一度診断する</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
